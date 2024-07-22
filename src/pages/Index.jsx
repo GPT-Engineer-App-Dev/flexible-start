@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const Index = () => {
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header with Navigation */}
+      {/* Header */}
       <header className="bg-primary text-primary-foreground p-4">
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">My Application</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><Button variant="ghost">Home</Button></li>
-              <li><Button variant="ghost">About</Button></li>
-              <li><Button variant="ghost">Contact</Button></li>
-            </ul>
-          </nav>
-        </div>
+        <h1 className="text-2xl font-bold">Interactive Application</h1>
       </header>
 
       {/* Main content */}
@@ -26,15 +23,18 @@ const Index = () => {
             <CardTitle>Welcome</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="mb-4">Hello! This is your updated application with a navigation menu. Feel free to modify and expand it as needed.</p>
-            <Button>Get Started</Button>
+            <p className="mb-4">This is an interactive application. Try out the counter below!</p>
+            <div className="text-center">
+              <p className="text-2xl font-bold mb-2">Count: {count}</p>
+              <Button onClick={incrementCount}>Increment</Button>
+            </div>
           </CardContent>
         </Card>
       </main>
 
       {/* Footer */}
       <footer className="bg-secondary text-secondary-foreground p-4 text-center">
-        <p>&copy; 2023 My Application. All rights reserved.</p>
+        <p>&copy; 2023 Interactive Application. All rights reserved.</p>
       </footer>
     </div>
   );
