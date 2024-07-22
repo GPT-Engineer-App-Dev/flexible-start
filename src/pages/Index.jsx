@@ -5,9 +5,18 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
+      {/* Header with Navigation */}
       <header className="bg-primary text-primary-foreground p-4">
-        <h1 className="text-2xl font-bold">My Application</h1>
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl font-bold">My Application</h1>
+          <nav>
+            <ul className="flex space-x-4">
+              <li><Button variant="ghost">Home</Button></li>
+              <li><Button variant="ghost">About</Button></li>
+              <li><Button variant="ghost">Contact</Button></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       {/* Main content */}
@@ -17,7 +26,7 @@ const Index = () => {
             <CardTitle>Welcome</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="mb-4">Hello! This is your updated application. Feel free to modify and expand it as needed.</p>
+            <p className="mb-4">Hello! This is your updated application with a navigation menu. Feel free to modify and expand it as needed.</p>
             <Button>Get Started</Button>
           </CardContent>
         </Card>
