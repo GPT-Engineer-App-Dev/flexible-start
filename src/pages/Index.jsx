@@ -17,7 +17,7 @@ const Index = () => {
             <CardTitle>Welcome</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="mb-4">This is a bare-bones application that you can modify and build upon.</p>
+            <p className="mb-4">Hello! This is your updated application. Feel free to modify and expand it as needed.</p>
             <Button>Get Started</Button>
           </CardContent>
         </Card>
